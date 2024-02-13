@@ -1,0 +1,38 @@
+POST http://localhost:3000/api/users/_refresh
+Content-Type: application/json
+Authorization: Refresh {{refreshToken}}
+
+### Refresh Token
+POST http://localhost:3000/api/users/_login
+Content-Type: application/json
+
+{
+  "email": "manik@mail.com",
+  "password": "inipasswordkan"
+}
+
+### Login User
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "email": "manik@mail.com",
+  "name": "Manik Gans",
+  "password": "inipasswordkan"
+}
+
+### Register user
+POST http://localhost:3000/api/books
+Content-Type: application/json
+Authorization: Bearer {{accessToken}}
+
+{
+  "title": "Doraemon",
+  "author_id": "12"
+}
+
+### Create Book
+GET http://localhost:3000/api/books
+Accept: application/json
+Authorization: Bearer {{accessToken}}
+### Get Books
